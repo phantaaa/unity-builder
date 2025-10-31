@@ -148,12 +148,8 @@ Write-Output "#    Building project     #"
 Write-Output "###########################"
 Write-Output ""
 
-$unityGraphics = "-nographics"
-
-if ($LLVMPIPE_INSTALLED -eq "true")
-{
-  $unityGraphics = "-force-opengl"
-}
+#$unityGraphics = "-nographics"
+$unityGraphics = "-nographics -force-d3d11"
 
 # If $Env:CUSTOM_PARAMETERS contains spaces and is passed directly on the command line to Unity, powershell will wrap it
 # in double quotes.  To avoid this, parse $Env:CUSTOM_PARAMETERS into an array, while respecting any quotations within the string.
