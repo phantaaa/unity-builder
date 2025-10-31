@@ -157,7 +157,6 @@ $_, $customParametersArray = Invoke-Expression('Write-Output -- "" ' + $Env:CUST
 $unityArgs = @(
     "-quit",
     "-batchmode",
-    $unityGraphics,
     "-silent-crashes",
     "-customBuildName", "`"$Env:BUILD_NAME`"",
     "-projectPath", "`"$Env:UNITY_PROJECT_PATH`"",
